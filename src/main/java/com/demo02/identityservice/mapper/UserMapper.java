@@ -5,7 +5,6 @@ import com.demo02.identityservice.dto.request.UserUpdateRequest;
 import com.demo02.identityservice.dto.response.UserResponse;
 import com.demo02.identityservice.entity.User;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring")
