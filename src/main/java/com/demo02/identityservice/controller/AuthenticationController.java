@@ -1,6 +1,6 @@
 package com.demo02.identityservice.controller;
 
-import com.demo02.identityservice.dto.request.ApiResponse;
+import com.demo02.identityservice.dto.response.ApiResponse;
 import com.demo02.identityservice.dto.request.AuthenticationRequest;
 import com.demo02.identityservice.dto.request.IntrospectRequest;
 import com.demo02.identityservice.dto.response.AuthenticationResponse;
@@ -28,6 +28,7 @@ public class AuthenticationController {
     ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {
         var result = authenticationService.authenticate(request);
         return ApiResponse.<AuthenticationResponse>builder()
+                .code(200)
                 .result(result)
                 .build();
     }
